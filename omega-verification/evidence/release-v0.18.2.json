@@ -1,0 +1,20 @@
+{
+  "version": "0.18.2-pre-apk",
+  "base_commit": "8ca3c2c1a4901209d8d3e3573ee3816893ff5587",
+  "python_tests_passed": 118,
+  "standalone_kotlin_jvm_checks_passed": 56,
+  "new_python_tests": 11,
+  "new_jvm_checks": 12,
+  "total_local_checks_passed": 174,
+  "pre_apk_checks_passed": 10,
+  "pre_apk_checks_total": 16,
+  "native_saf_revision_core": "TESTED_JVM_PROVIDER_DOUBLES",
+  "native_saf_android_backend_ui": "IMPLEMENTED_NOT_COMPILED",
+  "integration_intake": "TESTED_LOCAL_REAL_ZIP",
+  "prior_archive_inventory_files": 1114,
+  "apk_build_invoked": false,
+  "native_android_compiled": false,
+  "hardware_npu_verified": false,
+  "live_omat_executor_verified": false,
+  "production_approved": false
+}
