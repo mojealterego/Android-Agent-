@@ -1,0 +1,2 @@
+# OMAs tested dependency; install only the native client dependencies needed.
+cryptography==46.0.4
