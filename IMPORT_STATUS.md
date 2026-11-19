@@ -1,6 +1,6 @@
 # OMEGA Mobile Agent — import status
 
-Target branch: `main`. The source migration is **partial**: twenty-two verified source/test/documentation/evidence files plus this manifest are on GitHub; the Termux companion, separate MCP compatibility client, and native OMAs/OMAt clients are present. The complete source and Git history are in the conversation's separately generated bundle, not yet uploaded to GitHub. Direct Git transport from the build environment fails at DNS resolution.
+Target branch: `main`. The source migration is **partial**. The v0.14 baseline is preserved below; see the v0.18 update at the end for the latest state. The complete source and Git history are in the conversation's separately generated bundle, not yet uploaded to GitHub. Direct Git transport from the build environment fails at DNS resolution.
 
 | Snapshot | Files | Local reconstructed commit |
 |---|---:|---|
@@ -51,7 +51,7 @@ Intermediate roadmap stages v0.3–0.4 and v0.6–0.7 are included in v0.5 and v
 - `docs/OMEGA_NATIVE_OCAF.md` — Git blob `f8bd1e2c789f3ef2b0dbb75b6236d7407aa61664`
 - `omega-verification/evidence/release-v0.14.json` — Git blob `fa42a9a70a211839b355f67b8857f0cb0a52b1ac`
 
-All twenty-two source/test/documentation/evidence blobs were read back and matched the corresponding local Git hashes, including the two corrected MCP paths. Full native Android sources, new test suite and remaining files still require import. The complete local ZIP and bundle include them.
+At the v0.14 baseline all twenty-two source/test/documentation/evidence blobs were read back and matched the corresponding local Git hashes, including the two corrected MCP paths. Full native Android sources, new test suite and remaining files still require import. The complete local ZIP and bundle include them.
 
 ## Complete migration artifact
 
@@ -76,3 +76,9 @@ Do not force-push; stop on a merge conflict. Verify source history and remote tr
 
 106 standalone local checks passed (32 Kotlin/JVM, 74 Python; 16 new tests). Native OMAs tested with real loopback mTLS and Ed25519; native OMAt wire and SDK-double tests passed, actual Zenoh SDK unavailable. OCAF native runtime remains separate from MCP. Actual OCAF endpoints and tool execution not exercised. No live model, physical Android or NPU test. Gradle Android assembly failed before compilation due to DNS for services.gradle.org. Native submodule revisions and physical device E2E remain unresolved. The complete bundle retains upstream CI definitions as inactive templates in its final commit; earlier snapshots preserve originals. No Actions run requested.
 
+
+## v0.18.0 PRE-APK update
+
+Local reconstructed main: 5ae74b2cb96b447806ceefa84f6421be33525340 (9 commits, 1099 regular files and 2 gitlinks). Source ZIP SHA-256: 7cf3d59e22d30b13c5c31f4a3b5a126a2d32aecd00d8d1a09464de8535250465. Git bundle SHA-256: 8bcaade274a133c5f377f5b5795e1dbb7c00659a6b0ad6db88579931713ffd3d.
+
+This remote update imports the exact DeviceWorkflowGateway and NativeRunCoordinator source blobs, updated roadmap, dependency lock and release evidence. Other v0.18 source files and complete history remain in the local bundle; remote repository is not a complete build checkout. 44 JVM checks and 86 Python tests passed locally. Pre-APK inventory: 9/15 checks available; SDK API 37, Gradle distribution, both submodule checkouts, Zenoh SDK and signing configuration missing. No APK build or CI invoked. No production approval. OMAs/OMAt remain native and independent of MCP; upstream OMAt execution pending.

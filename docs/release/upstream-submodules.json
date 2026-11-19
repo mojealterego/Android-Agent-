@@ -1,0 +1,10 @@
+{
+  "upstream_repo": "danielealbano/android-remote-control-mcp",
+  "upstream_commit": "2e2582fa9ec6f88aa60d930abf29d9893748933d",
+  "upstream_tree": "49fd4e12fa63a826b64ca6b7998d976b39c9299c",
+  "submodules": [
+    {"path":"vendor/cloudflared","repo":"https://github.com/cloudflare/cloudflared.git","commit":"99b2eb2c0152862af2b1abf7c7b4e2170a46b9fe","tree":"2290f2b122315cd8d31601080a81abac8ff0a1a8"},
+    {"path":"vendor/ngrok-java","repo":"https://github.com/danielealbano/ngrok-java.git","commit":"7996ba4cc989a6c5a17605e55a8b2d28dda84156","tree":"46d0f327951836ad48a41f4f3a7507cae432d325"}
+  ],
+  "verification": "Both gitlink revisions and target Git commits were read through the GitHub Git data API. Local checkout/build of submodules remains pending."
+}

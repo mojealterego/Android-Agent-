@@ -1,0 +1,15 @@
+{
+  "version": "0.18.0",
+  "base_commit": "34490a4a0fb845fba60d49fba26e3023e45970a3",
+  "kotlin_jvm_checks_passed": 44,
+  "python_tests_passed": 86,
+  "total_local_checks_passed": 130,
+  "new_checks_passed": 24,
+  "native_android_compiled": false,
+  "pre_apk_environment_ready": false,
+  "apk_build_invoked": false,
+  "live_omat_executor_verified": false,
+  "physical_device_verified": false,
+  "production_approved": false,
+  "notes": "make invocation completed four JVM stages but reached tool timeout during Python suite; entire Python suite rerun separately exit 0, prerequisite inventory separately exit 1 as expected. No Android Gradle/build or CI invocation."
+}
