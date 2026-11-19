@@ -10,7 +10,7 @@ from .inference import LocalModel, ModelError, read_image, strict_json
 from .memory import GraphError
 from .recovery import CheckpointStore, RecoveryError, ResourceGuard, thermal_reader
 from .orchestrator import run_task, validate_input, TaskError
-from ocaf.storage_bridge import call_storage_workflow, BridgeError, MAX_REQUEST
+from omega_mcp.storage_bridge import call_storage_workflow, BridgeError, MAX_REQUEST
 
 
 def main(argv=None):
