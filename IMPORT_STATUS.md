@@ -1,6 +1,6 @@
 # OMEGA Mobile Agent — import status
 
-Target branch: `main`. The source migration is **partial**: three verified files of v0.10.0 plus this manifest are on GitHub. The complete source and Git history are in the conversation's separately generated bundle, not yet uploaded to GitHub. Direct Git transport from the build environment fails at DNS resolution.
+Target branch: `main`. The source migration is **partial**: eleven verified source/test/documentation files plus this manifest are on GitHub; the Termux companion and its direct dependencies are present. The complete source and Git history are in the conversation's separately generated bundle, not yet uploaded to GitHub. Direct Git transport from the build environment fails at DNS resolution.
 
 | Snapshot | Files | Local reconstructed commit |
 |---|---:|---|
@@ -10,6 +10,7 @@ Target branch: `main`. The source migration is **partial**: three verified files
 | v0.5.0 | 1013 | `615b281101ed8abf859490fd3a699d959dc8e32e` |
 | v0.8.0 | 1031 | `716fe3e977b8b014e8bda859579204c9e7e4291a` |
 | v0.10.0 | 1042 | `6e46d3f870cc9153da7f88367f394401e4714f26` |
+| v0.13.0 | 1054 | `ab3154251360cfe34c080e6fe03a7a8771b56dea` |
 
 Original upstream archive SHA-256: `07d3232b4a0c73fd13b3bae9ca9664c5e190a2ef2be427b123152594a7b31ab8`.
 
@@ -28,13 +29,22 @@ Intermediate roadmap stages v0.3–0.4 and v0.6–0.7 are included in v0.5 and v
 - `scripts/mobile_agent/orchestrator.py` — Git blob `66e93e7ad4ad84e19e2c155f2903f224b0245f9a`
 - `omega-verification/test_recovery.py` — Git blob `8c3392ca86d020a6d6f9dba65e0b4d4cf20e4192`
 
-All three GitHub blobs were read back and matched local Git object hashes. They are not a standalone runnable checkout; remaining dependencies and Android sources must be imported.
+- `scripts/mobile_agent/advanced.py` — Git blob `a0479058bd8bb89353819265024393f46ec2fd8c`
+- `scripts/mobile_agent/__main__.py` — Git blob `e7d22dc5b430137b0886954c3f05fde158139284`
+- `omega-verification/test_advanced.py` — Git blob `d550153cb58bcfc63c2b69ca0c5f0421cf6853a5`
+- `scripts/mobile_agent/__init__.py` — Git blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391`
+- `scripts/mobile_agent/inference.py` — Git blob `190af603e65543afb83d0b7d2a7b497372649f86`
+- `scripts/mobile_agent/memory.py` — Git blob `a5f3f9339a961a561e2ad52b645c970c2813a429`
+- `scripts/ocaf/storage_bridge.py` — Git blob `29eea807c19cf6803a3c7d9dbf918e347875aa97`
+- `docs/OMEGA_ADVANCED.md` — Git blob `d608b0967b7d867c769bdeeab932d6c0b8f91713`
+
+All eleven GitHub blobs were read back and matched local Git object hashes. The complete Android source tree and other tests remain to be imported.
 
 ## Complete migration artifact
 
-`OMEGA_MOBILE_AGENT_HISTORY_v0.10.0.bundle` — SHA-256 `2fc3eb98471ea56479670246c22433e4913ceb606cc20e4013c00d4109173018`.
+`OMEGA_MOBILE_AGENT_HISTORY_v0.13.0.bundle` — SHA-256 `cd5162c1a3906cc568cf0527bb552a2c7bd37490ce92e9cfc2f21e839dfea0a4`.
 
-`OMEGA_MOBILE_AGENT_v0.10.0_SOURCE.zip` — SHA-256 `9d372d684c277fef8f20f627b9fc87ea43bb28966c09980a670dda75ff35707e`.
+`OMEGA_MOBILE_AGENT_v0.13.0_SOURCE.zip` — SHA-256 `c9ad3d6d94cd24c3ae64e69da0b0d22a728ffa440ee9a6144b006242d46de32e`.
 
 After downloading the bundle and verifying its digest, authenticate to GitHub normally and import in a clean clone. Replace BUNDLE with the actual absolute path:
 
@@ -51,5 +61,5 @@ Do not force-push; stop on a merge conflict. Verify source history and remote tr
 
 ## Verification
 
-78 standalone local checks passed (32 Kotlin/JVM, 46 Python). Gradle Android assembly failed before compilation due to DNS for services.gradle.org. Native submodule revisions and physical device E2E remain unresolved. The complete bundle retains upstream CI definitions as inactive templates in its final commit; earlier snapshots preserve originals. No Actions run requested.
+90 standalone local checks passed (32 Kotlin/JVM, 58 Python; 12 new tests). Embedding retrieval, preview-bound local text creation and cooperative resource lease verified with local fixtures; no live model, physical Android or NPU test. Gradle Android assembly failed before compilation due to DNS for services.gradle.org. Native submodule revisions and physical device E2E remain unresolved. The complete bundle retains upstream CI definitions as inactive templates in its final commit; earlier snapshots preserve originals. No Actions run requested.
 
