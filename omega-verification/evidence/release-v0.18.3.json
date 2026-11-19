@@ -1,0 +1,19 @@
+{
+  "version": "0.18.3-pre-apk",
+  "base_commit": "7439940250890a73933cda2569090227ca954783",
+  "python_tests_passed": 137,
+  "standalone_kotlin_jvm_checks_passed": 56,
+  "new_python_tests": 19,
+  "total_local_checks_passed": 193,
+  "pre_apk_checks_passed": 10,
+  "pre_apk_checks_total": 23,
+  "verified_archive_cache": 0,
+  "real_upstream_submodule_checkouts_restored": 0,
+  "dependency_intake": "TESTED_LOCAL_FIXTURES; REAL DOWNLOADS FAILED",
+  "submodule_restore": "TESTED_REAL_LOCAL_GIT_BUNDLES; UPSTREAM FETCH FAILED",
+  "apk_build_invoked": false,
+  "native_android_compiled": false,
+  "hardware_npu_verified": false,
+  "live_omat_executor_verified": false,
+  "production_approved": false
+}

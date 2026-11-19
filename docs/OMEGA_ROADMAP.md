@@ -1,6 +1,6 @@
 # OMEGA Mobile Agent roadmap — preserved stage identifiers
 
-Current distribution v0.18.2 PRE-APK (patch; no new roadmap stages). Status denotes the actual gate, not just existence of code. No production approval. Historical evidence and commits remain intact.
+Current distribution v0.18.3 PRE-APK (patch; no new roadmap stages). Status denotes the actual gate, not just existence of code. No production approval. Historical evidence and commits remain intact.
 
 | Stage | Scope | Status / remaining gates |
 |---|---|---|
@@ -21,7 +21,7 @@ Current distribution v0.18.2 PRE-APK (patch; no new roadmap stages). Status deno
 | 0.15 | Android Native Agent Service | Source implemented: non-exported local bound service/activity, shared engine and process-wide admission; Android compilation/device lifecycle test pending |
 | 0.16 | Unified Multi-Protocol Gateway | Owner-side explicit routing implemented/tested, MCP/local storage gateway shared; live OMAt execution and native transport integration pending; no conversion |
 | 0.17 | Autonomous Device Workflows | Native owner-triggered read-only DAG, owner-confirmed local SAF version-copy workflow with one-use plan; arbitrary UI, MediaStore and remote mutation workflows open |
-| 0.18 | Production Security & Recovery | Local journal/fencing, live grant checks, SAF intent receipt, ZIP intake/quarantine and pre-APK preflight implemented/tested locally; native Android/security acceptance pending |
-| 1.0 | Production signed APK | NOT STARTED by owner instruction. Original submodule pins recovered; Gradle distribution, API 37 SDK, checkouts, signing and native device verification missing |
+| 0.18 | Production Security & Recovery | Local journal/fencing, live grant checks, SAF intent receipt, ZIP intake/quarantine, verified dependency cache, exact offline Git checkout restore and extended pre-APK preflight implemented/tested locally; native Android/security acceptance pending |
+| 1.0 | Production signed APK | NOT STARTED by owner instruction. Original submodule pins recovered; verified dependency intake and exact bundle restore tested; actual downloads blocked, SDK/NDK, updated Go, Rust, Maven, native outputs, signing and device verification missing |
 
-Do not add further roadmap versions to conceal unfinished gates. Owner instruction: stop before APK build. See [PRE-APK delivery](OMEGA_PRE_APK.md) [independent remaining gates](OMEGA_REMAINING_PRE_APK.md), and [SAF / integration intake](OMEGA_SAF_INTAKE.md). The build gate is not green; no APK assembled or signed.
+Do not add further roadmap versions to conceal unfinished gates. Owner instruction: stop before APK build. See [PRE-APK delivery](OMEGA_PRE_APK.md) [independent remaining gates](OMEGA_REMAINING_PRE_APK.md), [SAF / integration intake](OMEGA_SAF_INTAKE.md), and [dependency recovery](OMEGA_DEPENDENCY_RESTORE.md). The build gate is not green; no APK assembled or signed.
