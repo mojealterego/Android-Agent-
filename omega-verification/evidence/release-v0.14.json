@@ -1,0 +1,18 @@
+{
+  "version": "0.14.0",
+  "base_commit": "ab3154251360cfe34c080e6fe03a7a8771b56dea",
+  "python_passed": 74,
+  "new_python_tests": 16,
+  "jvm_checks_passed": 32,
+  "total_local_checks": 106,
+  "mcp_native_namespace_separation": "CLOSED_LOCAL",
+  "omas_staged_admission": "TESTED_ENGINEERING_SIMULATION_REAL_MTLS_ED25519",
+  "omat_discovery": "WIRE_AND_SDK_DOUBLE_TESTED",
+  "actual_zenoh_sdk": "not installed; no matching distribution available in environment",
+  "actual_ocaf_runtime_endpoints": "not exercised",
+  "android_unit_build": "blocked before compile: UnknownHostException services.gradle.org",
+  "ocaf_executor": "upstream OmatRegistry::execute returns ExecutorUnavailable",
+  "device_e2e": false,
+  "production_approved": false,
+  "roadmap_0_14_closed": false
+}
