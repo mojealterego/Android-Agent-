@@ -1,6 +1,6 @@
 # OMEGA Mobile Agent roadmap — preserved stage identifiers
 
-Current distribution v0.18.0 PRE-APK. Status denotes the actual gate, not just existence of code. No production approval. Historical evidence and commits remain intact.
+Current distribution v0.18.1 PRE-APK (patch; no new roadmap stages). Status denotes the actual gate, not just existence of code. No production approval. Historical evidence and commits remain intact.
 
 | Stage | Scope | Status / remaining gates |
 |---|---|---|
@@ -10,18 +10,18 @@ Current distribution v0.18.0 PRE-APK. Status denotes the actual gate, not just e
 | 0.4 | Android planner | Read-only bounded DAG and native owner UI implemented; generic approved UI/mutation planning pending |
 | 0.5 | Historical external storage adapter | MCP compatibility corrected and local regressions passed; NOT OCAF integration |
 | 0.6 | Local multimodal inference | Adapter tested with loopback fixtures; real model/device pending |
-| 0.7 | Graph memory | Request DAG + text checkpoint; durable cross-task graph/revocation pending |
+| 0.7 | Graph memory | Local explicit durable graph, recall, TTL and cascading revocation implemented and tested; Android native integration/cross-store synchronization pending |
 | 0.8 | Multi-agent orchestration | Three fixed roles; distributed/autonomous planning pending |
 | 0.9 | Recovery/observability | Local checkpoints and recovery tested; wider Android recovery pending |
-| 0.10 | Resource and persistent memory | Partial: local guards/checkpoint; NPU/thermal management and graph lifecycle pending |
+| 0.10 | Resource and persistent memory | Local graph lifecycle and persistent cooperative thermal hysteresis implemented/tested; physical NPU/driver and thermal control pending |
 | 0.11 | Semantic index/embedding | Persistent bounded explicit-corpus text index implemented and tested in local engineering tests; real embedding model and full device corpus pending |
-| 0.12 | Authorized modification planner | Partial: explicit, non-overwriting new text creation; broader operations not implemented |
-| 0.13 | OMEGA-X coordination | Partial: cooperative lease/RAM/thermal check; physical NPU not verified |
+| 0.12 | Authorized modification planner | Owner-local text creation and approval-bound existing text replacement/rollback implemented/tested; SAF and UI mutation unavailable |
+| 0.13 | OMEGA-X coordination | Shared cooperative inference lease, RAM gate and persistent thermal hysteresis implemented/tested; physical NPU not verified |
 | 0.14 | **Native OMAs + OMAt** | P14-A closed locally; P14-B tested engineering simulation; P14-C wire tested/SDK not installed; P14-D open. See OMEGA_NATIVE_OCAF.md |
 | 0.15 | Android Native Agent Service | Source implemented: non-exported local bound service/activity, shared engine and process-wide admission; Android compilation/device lifecycle test pending |
 | 0.16 | Unified Multi-Protocol Gateway | Owner-side explicit routing implemented/tested, MCP/local storage gateway shared; live OMAt execution and native transport integration pending; no conversion |
-| 0.17 | Autonomous Device Workflows | Native owner-triggered 1–4 read-only queries and existing DAG; controlled file creation CLI retained, broader autonomous mutation workflows open |
-| 0.18 | Production Security & Recovery | Local journal/fencing, live access checks, scoped media uncertainty, pre-APK preflight implemented and tested; native integration/security acceptance pending |
+| 0.17 | Autonomous Device Workflows | Native owner-triggered 1–4 read-only queries and existing DAG; local approval-bound creation and reversible replacement CLI; broader native/remote mutation workflows open |
+| 0.18 | Production Security & Recovery | Local journal/fencing, live access checks, scoped media uncertainty, edit reconciliation and pre-APK preflight implemented/tested; native integration/security acceptance pending |
 | 1.0 | Production signed APK | NOT STARTED by owner instruction. Original submodule pins recovered; Gradle distribution, API 37 SDK, checkouts, signing and native device verification missing |
 
-Do not add further roadmap versions to conceal unfinished gates. Owner instruction: stop before APK build. See [PRE-APK delivery](OMEGA_PRE_APK.md). The build gate is not green; no APK assembled or signed.
+Do not add further roadmap versions to conceal unfinished gates. Owner instruction: stop before APK build. See [PRE-APK delivery](OMEGA_PRE_APK.md) and [independent remaining gates](OMEGA_REMAINING_PRE_APK.md). The build gate is not green; no APK assembled or signed.

@@ -1,0 +1,18 @@
+{
+  "version": "0.18.1-pre-apk",
+  "base_commit": "5ae74b2cb96b447806ceefa84f6421be33525340",
+  "python_tests_passed": 107,
+  "new_python_tests": 21,
+  "standalone_kotlin_jvm_checks_passed": 44,
+  "total_local_checks_passed": 151,
+  "graph_local_lifecycle": "TESTED_LOCAL",
+  "owner_local_text_replacement_recovery": "TESTED_LOCAL",
+  "cooperative_thermal_hysteresis": "TESTED_ENGINEERING_SIMULATION",
+  "pre_apk_checks_passed": 9,
+  "pre_apk_checks_total": 15,
+  "native_android_compiled": false,
+  "apk_build_invoked": false,
+  "hardware_npu_verified": false,
+  "live_omat_executor_verified": false,
+  "production_approved": false
+}
