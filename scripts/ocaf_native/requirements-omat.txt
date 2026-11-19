@@ -1,0 +1,2 @@
+# OMAt API target; SDK installation and live protocol verification remain open.
+eclipse-zenoh==1.10.0
